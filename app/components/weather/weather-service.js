@@ -1,5 +1,7 @@
 import Weather from "../../models/weather.js";
 
+//PRIVATE-------------------------------
+
 // @ts-ignore
 const weatherApi = axios.create({
 	baseURL: "//bcw-sandbox.herokuapp.com/api/weather",
@@ -19,7 +21,7 @@ function _setState(prop, data) {
 	_subscribers[prop].forEach(fn => fn());
 }
 
-
+//PUBLIC----------------------------------
 export default class WeatherService {
 	get Weather() {
 		return _state.weather
