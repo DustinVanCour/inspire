@@ -7,7 +7,7 @@ const _is = new ImageService()
 function _drawImage() {
   let imageService = _is.Image
   let template = imageService.Template()
-  document.querySelector('#bg-image').innerHTML = template
+  document.getElementById('bg-image').innerHTML = template
 }
 
 

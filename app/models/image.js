@@ -7,7 +7,6 @@ export default class Image {
   }
 
   Template() {
-    return `
-<div style="background-image: url(${this.url})"></div>`
+    return `<div style="background-image: url(${this.url})"></div>`
   }
 }
