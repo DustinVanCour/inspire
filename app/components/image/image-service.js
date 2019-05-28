@@ -28,7 +28,6 @@ export default class ImageService {
 	addSubscriber(propName, fn) {
 		_subscribers[propName].push(fn)
 	}
-
 	get Image() {
 		return _state.image
 	}
