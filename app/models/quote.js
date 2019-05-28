@@ -6,12 +6,23 @@ export default class Quote {
   }
 
   Template() {
-    return `<div class="row">
-        <div class="col">
-          <h5>"${this.body}"</h5>
-          <h6>- ${this.author} -</h6>
-        </div>
-      </div>
+    return `
+    <div class="row">
+			<div class="col"></div>
+			<div class="col-9">
+				<div class="row">
+          <div class="col">
+          <h5><center>"${this.body}"</center></h5>
+          </div>
+				</div>
+				<div class="row">
+          <div class="col">
+          <h6><center>- ${this.author} -</center></h6>
+          </div>
+				</div>
+			</div>
+			<div class="col"></div>
+		</div>
     `
   }
 }

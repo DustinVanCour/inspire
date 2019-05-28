@@ -8,15 +8,26 @@ export default class Weather {
     // You should probably convert the temperature data to either F or C
     this.id = data.weather.id
     this.city = data.name
-    this.icon = data.weather.icon
+    this.icon = data.weather[0].icon
     this.kelvin = data.main.temp
     this.humidity = data.main.humidity
     this.lowTemp = data.main.temp_min
     this.highTemp = data.main.temp_max
   }
 
+  kelToFar(temp) {
+    let f = 1.8 * (temp - 273) + 32;
+    return f.toFixed(0)
+  }
+
   Template() {
+    let f = this.kelToFar(this.kelvin) + "°"
+
     return `
-    <div class="col">${this.city}</div>`
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col float-right"><h4><img src="http://openweathermap.org/img/w/${this.icon}.png"> ${f} ${this.city}</h4>
+   </div>
+`
   }
 }
