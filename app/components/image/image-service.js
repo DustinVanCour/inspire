@@ -1,6 +1,5 @@
 import Image from "../../models/image.js";
 
-Image
 //PRIVATE
 
 // @ts-ignore

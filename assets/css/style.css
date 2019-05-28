@@ -3,3 +3,7 @@
   font-size: 2em;
 }
 
+#bg-image {
+  background-size: cover;
+  position: center;
+}

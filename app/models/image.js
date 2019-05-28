@@ -8,6 +8,6 @@ export default class Image {
 
   Template() {
     return `
-  <img src="${this.url}">`
+<div style="background-image: url(${this.url})"></div>`
   }
 }
