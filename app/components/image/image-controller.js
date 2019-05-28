@@ -5,9 +5,7 @@ import ImageService from "./image-service.js";
 const _is = new ImageService()
 
 function _drawImage() {
-  let imageService = _is.Image
-  let template = imageService.Template()
-  document.getElementById('bg-image').innerHTML = template
+  document.querySelector('#bg-image').style.backgroundImage = `url("${_is.Image.url}")`
 }
 
 
