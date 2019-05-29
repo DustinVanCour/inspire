@@ -7,6 +7,6 @@ export default class Todo {
     this.user = data.user
   }
   get Template() {
-    return `<h1>${this.description}</h1>`
+    return `<input type="checkbox" name="toggler" ><p>${this.description}</p><button class="btn btn-secondary btn-sm" type="submit" onclick="app.controllers.todoController.removeTodo('${this._id}')">Remove</button>`
   }
 }
