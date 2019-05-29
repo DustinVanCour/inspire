@@ -12,23 +12,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<script>
-		function startTime() {
-			var today = new Date();
-			var h = today.getHours();
-			var m = today.getMinutes();
-			var s = today.getSeconds();
-			m = checkTime(m);
-			s = checkTime(s);
-			document.getElementById('txt').innerHTML =
-				h + ":" + m + ":" + s;
-			var t = setTimeout(startTime, 500);
-		}
-		function checkTime(i) {
-			if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-			return i;
-		}
-	</script>
 </head>
 
 <body class="container-fluid" id="bg-image" onload="startTime()">
@@ -47,10 +30,15 @@
 		</div>
 	</div>
 
-	A Todo List
+	<!-- A Todo List -->
 	<div id="todo-error"></div>
-	<form onsubmit=""></form>
-	<div id="todos"></div>
+	<form onsubmit="app.controllers.todoController.addTodo(event)">
+		<input type="text" name="description" placeholder="Whatcha Doin'?">
+		<button class="btn btn-secondary btn-sm" type="submit">Add Todo</button>
+	</form>
+	<div id="todos">
+		<h5>Todo's Go Here!</h5>
+	</div>
 	<div class="container-fluid" id="quote">
 
 	</div>
@@ -58,6 +46,23 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
+	<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+				h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+			return i;
+		}
+	</script>
 </body>
 
 </html>
