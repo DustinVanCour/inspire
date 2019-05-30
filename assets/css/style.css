@@ -9,6 +9,10 @@
   background-attachment: fixed;
 }
 
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+
 #weather {
   font-family: 'Righteous', cursive;
   color: white;
@@ -19,8 +23,13 @@
   float: right;
 }
 
-#clock-row {
-  height: 85vh;
+.todo-text {
+  text-shadow: 1px 1px black;
+  color: white;
+}
+
+#txt {
+  height: 70vh;
   font-family: 'Righteous', cursive;
   font-size: 5rem;
   color: white;

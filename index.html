@@ -24,20 +24,26 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row" id="clock-row">
-			<div class="col"></div>
-			<div class="col-9" id="txt"></div>
+			<div class="col">
+
+			</div>
+			<div class="col" id="txt"></div>
 			<div class="col"></div>
 		</div>
 	</div>
 
 	<!-- A Todo List -->
 	<div id="todo-error"></div>
-	<form onsubmit="app.controllers.todoController.addTodo(event)">
-		<input type="text" name="description" placeholder="Whatcha Doin'?">
-		<button class="btn btn-secondary btn-sm" type="submit">Add Todo</button>
-	</form>
-	<div id="todos">
-		<h5>Todo's Go Here!</h5>
+	<div class="todo-bg">
+		<form onsubmit="app.controllers.todoController.addTodo(event)">
+			<input type="text" name="description" placeholder="Whatcha Doin'?">
+			<button class="btn btn-secondary btn-sm" type="submit">Add Todo</button>
+		</form>
+		<div class="row">
+			<div class="col-3" id="todos">
+
+			</div>
+		</div>
 	</div>
 	<div class="container-fluid" id="quote">
 
