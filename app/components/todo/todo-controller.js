@@ -1,6 +1,6 @@
 import TodoService from "./todo-service.js";
 
-//PRIVATE
+//PUBLIC
 const _todoService = new TodoService()
 
 function _drawTodos() {
@@ -17,7 +17,7 @@ function _drawError() {
 	document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
 }
 
-
+//PRIVATE
 export default class TodoController {
 	constructor() {
 		_todoService.addSubscriber('error', _drawError)

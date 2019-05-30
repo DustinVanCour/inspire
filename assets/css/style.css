@@ -9,7 +9,7 @@
   background-attachment: fixed;
 }
 
-input[type=checkbox]:checked + label.strikethrough{
+.strikethrough{
   text-decoration: line-through;
 }
 
